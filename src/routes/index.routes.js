@@ -13,15 +13,22 @@ router.get("/about", (req, res) => {
 });
 
 router.get("/edit/:id", async (req, res) => {
-  try { 
+  try {
     const taskToEdit = await Task.findById(req.params.id).lean();
-    res.render("edit", {task: taskToEdit});
-  }
-  catch (e) {
+    res.render("edit", { task: taskToEdit });
+  } catch (e) {
     console.log(e);
   }
 });
 
+router.get("/delete/:id", async (req, res) => {
+  try {
+    await Task.findByIdAndDelete(req.params.id);
+    res.redirect("/");
+  } catch (e) {
+    console.log(e);
+  }
+});
 
 router.post("/tasks/add", async (req, res) => {
   try {
