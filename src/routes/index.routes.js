@@ -10,4 +10,9 @@ router.get("/about", (req, res) => {
   res.send("about");
 });
 
+router.post("/tasks/add", (req, res) =>{
+  const task = req.body;
+  res.send(task);
+});
+
 export default router;
