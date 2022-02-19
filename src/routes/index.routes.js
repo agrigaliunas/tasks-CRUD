@@ -15,9 +15,13 @@ router.get("/about", (req, res) => {
 });
 
 router.post("/tasks/add", async (req, res) =>{
-  const task = Task(req.body);
-  await task.save();
-  res.redirect("/");
+  try {
+    const task = Task(req.body);
+    await task.save();
+    res.redirect("/");
+  } catch (e) {
+      console.log(e);
+  }
 });
 
 export default router;

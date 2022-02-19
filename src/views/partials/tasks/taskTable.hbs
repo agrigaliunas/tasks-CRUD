@@ -1,19 +1,24 @@
-<div>
-  <ul>
-    {{#each tasks}}
-    <div>
-      <li>
-        <b>Title:</b>
-        {{title}}
-        <br>
-        <b>Description:</b>
-        <br>
-        {{description}}
-      </li>
-      <button>Editar</button>
-      <button>Eliminar</button>
-    </div>
-    <br>
-    {{/each}}
-  </ul>
-</div>
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks}}
+        <tr>
+            <td>{{title}}</td>
+            <td>{{description}}</td>
+            <td>
+                <button>Done</button>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
