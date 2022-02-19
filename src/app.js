@@ -5,7 +5,7 @@ import path from "path";
 
 const app = express();
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views")); // define where is views folder
 
 const exphbs = create({
     layoutsDir: path.join(app.get("views"), "layouts"),
@@ -14,7 +14,7 @@ const exphbs = create({
     extname: ".hbs",
 });
 
-app.engine(".hbs", exphbs.engine);
+app.engine(".hbs", exphbs.engine); // set engine -> handlebars
 app.set("view engine", ".hbs");
 
 // Routes
