@@ -1,12 +1,10 @@
 import { Router } from "express";
 import Task from "../models/Task";
+import { renderTasks } from "../controllers/tasks.controller";
 
 const router = Router();
 
-router.get("/", async (req, res) => {
-  const taskArray = await Task.find().lean();
-  res.render("index", { tasks: taskArray });
-});
+router.get("/", renderTasks);
 
 router.get("/about", (req, res) => {
   res.send("about");
