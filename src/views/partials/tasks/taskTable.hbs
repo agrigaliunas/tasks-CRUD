@@ -12,7 +12,11 @@
             <td>{{title}}</td>
             <td>{{description}}</td>
             <td>
-                <button>Done</button>
+                {{#if done}}
+                    <a href="/toggleDone/{{_id}}">Uncheck</a>
+                {{else}}
+                    <a href="/toggleDone/{{_id}}">Check</a>
+                {{/if}}
                 <a href="/edit/{{_id}}">Edit</a>
                 <a href="/delete/{{_id}}">Delete</a>
             </td>

@@ -30,6 +30,13 @@ router.get("/delete/:id", async (req, res) => {
   }
 });
 
+router.get("/toggleDone/:id", async (req, res) => {
+  const taskToggleDone = await Task.findById(req.params.id);
+  taskToggleDone.done = !taskToggleDone.done;
+  await taskToggleDone.save();
+  res.redirect("/");
+});
+
 router.post("/tasks/add", async (req, res) => {
   try {
     const newTask = Task(req.body);
