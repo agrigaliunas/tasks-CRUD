@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>
+          {{#if done}}
+            <a href="/tasks/{{_id}}/toggleDone">Uncheck</a>
+          {{else}}
+            <a href="/tasks/{{_id}}/toggleDone">Check</a>
+          {{/if}}
+          <a href="/tasks/{{_id}}/edit">Edit</a>
+          <a href="/tasks/{{_id}}/delete">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
