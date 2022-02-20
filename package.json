@@ -1,6 +1,9 @@
 {
   "name": "task",
   "version": "0.0.1",
+  "engines": {
+    "node": "16.14.0"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
