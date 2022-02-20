@@ -1,28 +1,26 @@
 <table>
-    <thead>
-        <tr>
-            <th>Title</th>
-            <th>Description</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each tasks}}
-        <tr>
-            <td>{{title}}</td>
-            <td>{{description}}</td>
-            <td>
-                {{#if done}}
-                    <a href="/toggleDone/{{_id}}">Uncheck</a>
-                {{else}}
-                    <a href="/toggleDone/{{_id}}">Check</a>
-                {{/if}}
-                <a href="/edit/{{_id}}">Edit</a>
-                <a href="/delete/{{_id}}">Delete</a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+      <tr>
+        <td>{{title}}</td>
+        <td>{{description}}</td>
+        <td>
+          {{#if done}}
+            <a href="/toggleDone/{{_id}}">Uncheck</a>
+          {{else}}
+            <a href="/toggleDone/{{_id}}">Check</a>
+          {{/if}}
+          <a href="/edit/{{_id}}">Edit</a>
+          <a href="/delete/{{_id}}">Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>
-
-
