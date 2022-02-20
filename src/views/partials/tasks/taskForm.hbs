@@ -1,15 +1,29 @@
-<form action="/tasks/add" , method="POST">
+<div class="card card-body p-4 rounded-0 bg-dark text-white">
+  <h3>Create your tasks</h3>
+  <form action="/tasks/add" method="post">
 
-  <div>
-    <label for="title">Title:</label><br />
-    <input type="text" name="title" /><br />
-  </div>
+    <div class="mb-3">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        class="form-control rounded-0 bg-dark text-white"
+        type="text"
+        name="title"
+        placeholder="Title"
+        autofocus
+      />
+    </div>
 
-  <div>
-    <label for="description">Description:</label><br />
-    <textarea name="description"></textarea>
-  </div>
+    <div class="mb-3">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control rounded-0 bg-dark text-white"
+        name="description"
+        cols="80"
+        placeholder="Add a Description"
+      ></textarea>
+    </div>
 
-  <button>Add task</button>
-
-</form>
+    <button class="btn btn-primary" type="submit">Create</button>
+  </form>
+</div>
