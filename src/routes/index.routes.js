@@ -12,14 +12,14 @@ const router = Router();
 
 router.get("/", renderTasks);
 
-router.get("/edit/:id", renderEditTasks);
+router.get("/tasks/:id/edit", renderEditTasks);
 
-router.get("/delete/:id", deleteTasks);
+router.get("/tasks/:id/delete", deleteTasks);
 
-router.get("/toggleDone/:id", toggleDoneTasks);
+router.get("/tasks/:id/toggleDone", toggleDoneTasks);
 
 router.post("/tasks/add", createTasks);
 
-router.post("/edit/:id", editTasks);
+router.post("/tasks/:id/edit", editTasks);
 
 export default router;
