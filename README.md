@@ -1,8 +1,12 @@
-# tasks-CRUD
-Tasks app made with node-js and mongodb
+<h1>Tasks CRUD app made with node.js and mongodb</h1>
 
 
 I created this web based in Fazt tutorial: node-js & mongodb CRUD. 
-I learned about express, node-js, moongoDB, mongoose, handlebars and some of the dependences that this CRUD needed to be deployed on HEROKU.
+<br>
+<br>
 
-You can access the web here: https://tasks-app-agrigaliunas.herokuapp.com/
+<i>Making this, I learned the basics about MVC, Express, Nodejs, MongoDB, Mongoose.js, Handlebars, environment variables and some of the dependences that this CRUD needed to be deployed on HEROKU.
+
+  <h2>You can access and test the CRUD here: https://tasks-app-agrigaliunas.herokuapp.com/</h2>
+  
+:)
